@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route,
+  link
+}from "react-router-dom"
 
-function App() {
+import {Home} from './componat/home';
+import {Contact} from './componat/contact';
+import {Topnav} from './componat/Topnav';             
+import {Project} from './componat/project';             
+import {Experience} from './componat/experience';             
+import { About } from './componat/about';
+
+
+export default function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Topnav></Topnav>
+        <Switch>
+          <Route path="/contact" element={<Contact/>}></Route>
+          <Route path="/home" element={<Home/>}></Route>
+          <Route path="/about" element={<About></About>}></Route>
+          <Route path="/" index element={<Home/>}></Route>
+          <Route path="/Experience" element={<Experience/>}></Route>
+          <Route path="/project" element={<Project/>}></Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;

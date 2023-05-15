@@ -1,0 +1,43 @@
+.home-main{
+    background-image: url('../image/z.jpg');
+    background-repeat: no-repeat, repeat; 
+    background-size: cover;
+    height: 100vh; 
+ }
+ .about{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ .mypic{
+     width: 200%; 
+      height: 200%; 
+      /* mix-blend-mode:screen; */
+     
+ }
+ .about>p{
+     text-align: left;
+ }
+ .pic-my{
+     width: 50%;
+     height:170%;
+ }
+ .my-info-container{
+     display: flex;
+     padding: 6rem;
+ }
+ .lorem{
+    color:chartreuse;
+    margin-bottom: 900px;
+ }
+ img.pic-my {
+    margin-left: 480px;
+    margin-top: 25px;
+    border-radius: 0px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    
+    
+
+}
